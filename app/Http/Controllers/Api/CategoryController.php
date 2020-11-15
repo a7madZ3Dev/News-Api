@@ -36,7 +36,7 @@ class CategoryController extends Controller
           $category = new Category();
           $category->title = $request->get( 'title' );
           $category->save();
-         return $category;
+         return response()->json(['data'=>$category],200);
     }
 
     /**
