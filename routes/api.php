@@ -32,6 +32,7 @@ Route::get('/comments/author/{id}', [UserController::class, 'comments']);
 
 Route::post('/register', [UserController::class, 'store']);
 Route::post('/token', [UserController::class, 'getToken']);
+Route::post('/category', [CategoryController::class, 'store']);
 
 
 Route::middleware('auth:api')->group(function(){
